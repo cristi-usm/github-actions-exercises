@@ -3,9 +3,10 @@
 Job-urile, in mod implicit, ruleaza in paralel. Acest lucru permite executarea mai multor sarcini in acelasi timp. In plus, job-urile pot fi legate in serie folosind proprietatea `needs`.
 
 ## 1. Creeaza job-uri paralele separate
+
 In primul rand, vom crea doua job-uri independente unul de celalalt (care ruleaza in paralel).
 
-1. Din ramura **default** a repozitoriului tau, creeaza o noua ramura de cod numita `feature/dependent`
+1. Din ramura **main** a repozitoriului tau, creeaza o noua ramura de cod numita `feature/dependent`
 2. Creeaza un nou fisier numit `.github/workflows/dependent.yaml`
 3. Copiaza continutul de mai jos in fisierul nou creat:
 
