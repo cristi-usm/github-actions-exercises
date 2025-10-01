@@ -1,11 +1,15 @@
 name: Basic Workflow
 on:
-    push:
-        branches: feature/basic-workflow
+  push:
+    branches: feature/basic-workflow
 jobs:
-    say-hello:
-        name: Say Hello
-        runs-on: ubuntu-latest
-        steps:
-            - name: Greet the World
-              run: echo "Hello, World!"
+  say-hello:
+    name: Say Hello
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet the World
+        run: echo "Hello, World!"
+      - name: An Error I made
+      run: |
+        echo "I've made an error!"
+        exit 1
