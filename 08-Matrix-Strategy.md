@@ -2,10 +2,11 @@
 
 Definirea unei strategii de matrice intr-un workflow permite scalarea executiei job-urilor pe baza variabilelor definite de tine. Acest lucru este extrem de util pentru repetarea aceluiasi job, dar cu valori usor diferite, cum ar fi atunci cand trebuie sa testezi software-ul impotriva diferitelor versiuni ale unui limbaj sau sa construiesti software-ul impotriva mai multor sisteme de operare.
 
-## 1. Creeaza un workflow de matrice pentru a scala pe diferite runner-e
+## 1. Creeaza un workflow de matrice pentru a scala pe diferite runnere
+
 In primul rand, vom vedea un workflow de matrice care se scaleaza unidimensional prin crearea unei variabile `matrix` numita `os`.
 
-1. Din ramura **default** a repozitoriului tau, creeaza o noua ramura de cod numita `feature/matrix`
+1. Din ramura **main** a repozitoriului tau, creeaza o noua ramura de cod numita `feature/matrix`
 2. Creeaza un nou fisier numit `.github/workflows/matrix.yaml`
 3. Copiaza continutul de mai jos in fisierul nou creat:
 
