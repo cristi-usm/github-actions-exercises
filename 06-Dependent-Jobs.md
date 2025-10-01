@@ -40,6 +40,7 @@ jobs:
 Rezultatul va fi o executie care are doua job-uri care s-au executat in acelasi timp. Graficul de executie arata ca job-urile sunt separate.
 
 ## 2. Modifica workflow-ul pentru a face job-uri specifice folosind "needs"
+
 In al doilea rand, vom ajusta workflow-ul nostru pentru a avea doua job-uri in serie, si un al treilea in paralel.
 
 1. Inlocuieste continutul fisierului de workflow din pasul anterior:
