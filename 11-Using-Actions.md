@@ -112,10 +112,10 @@ jobs:
             return create.data.number
 ```
 
-4. Adaugă, commit și împinge modificările tale către ramura implicită.
-5. Mergi la depozitul tău și vizualizează fila Acțiuni pentru a vedea execuția, apoi vizitează fila Probleme.
+4. Adaugă, commit și fa push modificărilor tale către ramura implicită.
+5. Mergi la repozitoriul tău și vizualizează pagina Actions pentru a vedea execuția, apoi vizitează pagina Issues.
 
-Rezultatul va fi o problemă creată în depozitul tău.
+Rezultatul va fi o problemă creată în repozitoriul tău.
 
 ## 4. Fuzionarea cererii de extragere în ramura **implicită** pentru utilizare ulterioară
 
