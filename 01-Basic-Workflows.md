@@ -1,6 +1,6 @@
 # 1 - Workflow de Baza
 
-Aceasta sarcina te va ghida prin configurarea unui workflow in repozitoriu curent care asculta pentru evenimente de tip push in repozitoriu. Workflow-ul consuma actiuni si sunt inima utilizarii Actions in depozitul tau.
+Aceasta sarcina te va ghida prin configurarea unui workflow in repozitoriul curent care asculta pentru evenimente de tip push in repozitoriu. Workflow-ul consuma actiuni si sunt inima utilizarii Actions in repozitoriul tau.
 
 **GitHub Actions** ruleaza pe baza fisierelor de workflow care sunt gestionate si intretinute in repozitoriul tau. Poti vedea executiile workflow-urilor si istoricul job-urilor din tab-ul Actions a repozitoriului tau. In plus, poti vedea starea acelor executii (reusite, esuate, in curs de desfasurare).
 
@@ -8,7 +8,7 @@ Stergerea unui workflow din repozitoriul tau nu ii sterge istoricul. Log-urile s
 
 ## 1. Crearea unui workflow de baza
 
-1. Din ramura **default (main/master)** a repozitoriului tau, creeaza o noua ramura de cod numita `feature/basic-workflow`
+1. Din ramura **main** a repozitoriului tau, creeaza o noua ramura de cod numita `feature/basic-workflow`
 2. Creeaza un nou fisier numit `.github/workflows/basic-workflow.yaml`
 3. Copiaza continutul de mai jos in fisierul nou creat:
 
@@ -69,7 +69,7 @@ Rezultatul va fi ca workflow-ul a esuat executia.
 In continuare vom vedea ca rezultatul de esec este atribuit PR-ului. 
 
 1. Mergi la tab-ul pull requests din repozitoriul tau GitHub.
-2. Deschide un pull request pentru a face merge la `feature/basic-workflow` in ramura ta **default**.
+2. Deschide un pull request pentru a face merge la `feature/basic-workflow` in ramura ta **main**.
 3. Revizueste zona de status checks de deasupra optiunii de merge.
 
 Rezultatul va fi ca pull request-ul va arata detaliile status checks deasupra optiunii de merge.
@@ -77,6 +77,6 @@ Rezultatul va fi ca pull request-ul va arata detaliile status checks deasupra op
 In plus, ai vazut cum sa rulezi mai multe comenzi intr-o singura valoare `run` folosind caracterul `|` (pipe).
 
 ## 4: Curatare
-1. Sterge PR-ul creat in [Pasul 3](#pasul-3-deschide-un-pr-pentru-a-face-merge-la-codul-tau)
-2. Sterge ramura publicata creata in [Pasul 1](#pasul-1-creaza-un-workflow-de-baza)
-3. Treci inapoi pe ramura default local.
+1. Sterge PR-ul creat in *Pasul 3*
+2. Sterge ramura publicata creata in *Pasul 1*
+3. Treci inapoi pe ramura main local.
