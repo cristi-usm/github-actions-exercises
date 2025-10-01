@@ -1,5 +1,7 @@
+const chalk = require('chalk');
+
 function hello(name) {
-  return `Hello, ${name}.`;
+  return `Hello, ${chalk.red(name)}.`;
 }
 
 console.log(hello("GitHub"));
