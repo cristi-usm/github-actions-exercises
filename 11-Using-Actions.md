@@ -1,11 +1,11 @@
 # Utilizarea Acțiunilor
 Până în acest moment, toate exercițiile anterioare s-au concentrat pe utilizarea proprietății `run` pentru un pas. Acest lucru ne-a permis să executăm comenzi CLI în mediul pe care îl foloseam (Ubuntu Linux). Ca rezultat, am fost martorii unor comenzi bash simple (`echo`, etc.).
 
-Următorul exercițiu te va ghida prin utilizarea acțiunilor (acestea pot proveni dintr-un depozit public sau intern), care diferă de comenzile simple `run`, deoarece utilizează sintaxa și regulile de creare a acțiunilor, pe care le vom acoperi în pasul următor.
+Următorul exercițiu te va ghida prin utilizarea acțiunilor (acestea pot proveni dintr-un repozitoriu public sau intern), care diferă de comenzile simple `run`, deoarece utilizează sintaxa și regulile de creare a acțiunilor, pe care le vom acoperi în pasul următor.
 
 ## 1. Creează un nou fișier de workflow
 
-1. Din ramura **implicită** a repozitoriului tău, creează o nouă ramură de cod numită `feature/using-actions`
+1. Din ramura **main** a repozitoriului tău, creează o nouă ramură de cod numită `feature/using-actions`
 2. Creează un nou fișier numit `.github/workflows/using-actions.yaml`
 3. Copiază conținutul de mai jos în fișierul nou creat:
 
