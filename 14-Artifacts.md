@@ -1,14 +1,13 @@
 # Artefacte
+
 GitHub oferă funcționalitatea de artefacte încorporată pentru salvarea și reutilizarea artefactelor între joburi. Aceste artefacte pot fi descrise pur și simplu ca un fel de output dintr-un proces de build. Acesta ar putea fi un binar, fișiere de suport sau practic orice vrei să transmiți de la un job la altul.
 
 Exercițiul de mai jos te va ghida prin actualizarea workflow-ului `Continuous Integration` creat anterior (vezi [13-Continuous-Integration](./13-Continuous-Integration.md)) cu acțiunea de artefacte care va gestiona salvarea artefactului creat din procesul nostru de build. Ulterior, vom folosi acest lucru pentru a livra continuu o imagine Docker cu artefactul nostru (vezi [16-Packages](./16-Packages.md)).
 
-> **Notă**: Există și un exemplu Golang disponibil în directorul `golang_app` dacă preferi să lucrezi cu Go.
-
 ## 1. Adaugă acțiunea de salvare a artefactului
 Prin adăugarea acțiunii publice `actions/upload-artifact` la workflow-ul nostru `Continuous Integration`, avem o modalitate ușor de utilizat pentru a lucra cu API-ul Artefactelor.
 
-1. Din ramura **implicită** a repozitoriului tău, creează o nouă ramură de cod numită `feature/artifacts`
+1. Din ramura **main** a repozitoriului tău, creează o nouă ramură de cod numită `feature/artifacts`
 2. Deschide fișierul numit `.github/workflows/ci-cd.yaml`
 3. Înlocuiește conținutul fișierului cu:
 
