@@ -33,6 +33,7 @@ jobs:
 Rezultatul va fi o executie a nu doar unui job, ci trei. Strategia a definit o variabila cu trei valori (matrix.os) care au fost apoi folosite pentru a scala. Pentru fiecare valoare de variabila pe care o adaugi, numarul de job-uri creste.
 
 ## 2. Scaleaza si mai mult strategia de matrice
+
 Acum vom adauga o alta variabila `matrix` numita `node-version` si o vom folosi pentru a scala si mai mult.
 
 1. Inlocuieste continutul fisierului de workflow din pasul anterior:
