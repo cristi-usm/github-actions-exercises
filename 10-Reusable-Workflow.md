@@ -84,7 +84,7 @@ Rezultatul va fi o execuție a workflow-ului `Manual & Shared Workflow`, care va
 Nu sunt necesari pași suplimentari, deoarece ai făcut commit direct pe ramura implicită.
 
 ## Notițe
-- Atunci când folosești un workflow partajat dintr-un depozit **public** sau **intern**, sintaxa va fi ușor diferită:
+- Atunci când folosești un workflow partajat dintr-un repozitoriu **public** sau **intern**, sintaxa va fi ușor diferită:
   - Pentru un depozit public: `uses: <owner>/<repo>/<path-to-workflow>@<release-tag>`
   - Pentru un depozit privat: `uses: <owner>/<repo>/<path-to-workflow>@<release-tag>`
 - Workflow-ul partajat dintr-un depozit **privat** trebuie să fie aiba setările corespunzătoare ale depozitului (vezi [instrucțiunile aici](https://docs.github.com/en/enterprise-cloud@latest/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#allowing-access-to-components-in-an-internal-repository))
