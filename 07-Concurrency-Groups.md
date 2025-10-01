@@ -4,7 +4,7 @@ In mod implicit, toate workflow-urile functioneaza cu un anumit nivel de concure
 
 ## 1. Creeaza doua workflow-uri care asculta pentru aceleasi evenimente cu concurenta definita
 
-1. Din ramura **default** a repozitoriului tau, creeaza o noua ramura de cod numita `feature/concurrency`
+1. Din ramura **main** a repozitoriului tau, creeaza o noua ramura de cod numita `feature/concurrency`
 2. Creeaza un nou fisier numit `.github/workflows/concurrency.yaml`
 3. Copiaza continutul de mai jos in fisierul nou creat:
 
@@ -48,7 +48,7 @@ jobs:
 
 Rezultatul va fi o executie a workflow-ului ori de cate ori sunt trimise modificari catre ramura `feature/concurrency`, dar al doilea workflow (oricare dintre ele este preluat al doilea) va astepta finalizarea primului inainte de a permite executia.
 
-Aceasta nu este o situatie de utilizare din lumea reala, dar demonstreaza aplicarea concurentei intre workflow-uri. Executiile suplimentare ale unui workflow din cauza evenimentelor suplimentare care sunt trimise deja actioneaza in acest fel (citeste: mai multe commit-uri trimise), dar daca trebuie sa aplici acest lucru si intre alte workflow-uri, aceasta este modalitatea de a realiza acest lucru.
+Aceasta nu este o situatie de utilizare din lumea reala, dar demonstreaza aplicarea concurentei intre workflow-uri. Executiile suplimentare ale unui workflow din cauza evenimentelor suplimentare care sunt trimise deja, actioneaza in acest fel, dar daca trebuie sa aplici acest lucru si intre alte workflow-uri, aceasta este modalitatea de a realiza acest lucru.
 
 ## Pasul 2: Adauga anularea la workflow-uri
 
@@ -92,8 +92,8 @@ jobs:
 
 3. Adauga & comite schimbarile, apoi publica ramura.
 
-Rezultatul va fi ca o executie a workflow-ului (oricare este declansata prima) va fi anulata atunci cand a doua este in asteptare, deoarece se afla in aceeasi grupa de concurenta.
+Rezultatul va fi ca o executie a workflow-ului (oricare este declansata prima), acesta va fi anulat atunci cand al doilea este in asteptare, deoarece se afla in aceeasi grupa de concurenta.
 
 ## Pasul 3: Curatare
-1. Sterge ramura publicata creata in [Pasul 1](#step-1-create-two-workflows-listening-for-the-same-events-with-concurrency-defined)
-2. Comuta inapoi la ramura implicita local.
+1. Sterge ramura creata in Pasul 1.
+3. Comuta inapoi la ramura implicita local.
