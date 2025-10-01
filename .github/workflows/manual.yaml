@@ -1,4 +1,4 @@
-name: Manual Workflow
+name: Manual & Shared Workflow
 on:
     workflow_dispatch:
         inputs:
@@ -11,6 +11,18 @@ on:
                     - info
                     - warning
                     - debug
+            string-example:
+                description: String Example
+                required: true
+                default: input
+                type: string
+    workflow_call:
+        inputs:
+            choice-example:
+                description: Choice Example
+                required: true
+                default: warning
+                type: string
             string-example:
                 description: String Example
                 required: true

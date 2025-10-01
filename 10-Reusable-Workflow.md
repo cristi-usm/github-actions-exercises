@@ -2,11 +2,11 @@
 
 În exercițiul anterior [09-Manual-Workflow.md](./09-Manual-Workflow.md), ai creat un workflow care putea fi declanșat manual.
 
-În acest exercițiu, vom modifica același workflow pentru a fi apelat de alte workflow-uri. Acest model poate fi utilizat cu workflow-uri din depozite publice sau interne pentru a crea un set centralizat de workflow-uri. Acest lucru poate reduce configurația workflow-ului în întreaga organizație, economisind timp și efort.
+În acest exercițiu, vom modifica același workflow pentru a fi apelat de alte workflow-uri. Acest model poate fi utilizat cu workflow-uri din repozitorii publice sau interne pentru a crea un set centralizat de workflow-uri. Acest lucru poate reduce configurația workflow-ului în întreaga organizație, economisind timp și efort.
 
 ## 1. Modifică workflow-ul manual și adaugă modificările
 
-1. Treci la ramura **implicită** a repozitoriului depozitului tău 
+1. Treci la ramura **main** a repozitoriului tău 
 2. Deschide fișierul numit `.github/workflows/manual.yaml` (dacă nu ai acest fișier, urmează instrucțiunile din [09-Manual-Workflow.md](./09-Manual-Workflow.md))
 3. Înlocuiește conținutul fișierului cu:
 
