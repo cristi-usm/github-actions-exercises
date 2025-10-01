@@ -47,10 +47,11 @@ jobs:
 
 Rezultatul va fi un workflow pe care îl poți executa manual și care este declanșat automat de un PR.
 
-## 2. Activează protecția ramurii pe ramura ta **implicită**
+## 2. Activează protecția ramurii pe ramura ta **main**
+
 Protecția ramurii este una dintre caracteristicile pe care GitHub le oferă și care îți permite să controlezi cine, ce și când poate fi împins pe o ramură. Pentru integrarea continuă, livrarea continuă și desfășurarea continuă, această caracteristică este esențială. În pasul de mai jos, vom activa aceasta pentru a ne asigura că niciun "cod rău" nu poate trece.
 
-1. Activează protecția ramurii pentru ramura ta **implicită** ([instrucțiuni](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule))
+1. Activează protecția ramurii pentru ramura ta **main** ([instrucțiuni](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule))
 2. După ce ai adăugat modelul de nume al ramurii, folosește următoarele setări. Lasă totul necompletat, cu excepția:
    1. `Require a pull request before merging`
    2. `Require status checks to pass before merging`
@@ -58,11 +59,12 @@ Protecția ramurii este una dintre caracteristicile pe care GitHub le oferă și
    4. `Do not allow bypassing the above settings` (necesar pentru administratori)
 
 ## 3. Adaugă o nouă ramură și adaugă niște cod "rău"
-Acum că ramura **implicită** este protejată, vom adăuga niște cod "rău" care va eșua la linting. Acest lucru ne va oferi un exemplu despre cum verificările de stare necesare ne vor împiedica să facem greșeli.
+
+Acum că ramura **main** este protejată, vom adăuga niște cod "rău" care va eșua la linting. Acest lucru ne va oferi un exemplu despre cum verificările de stare necesare ne vor împiedica să facem greșeli.
 
 ### Varianta Node.js:
 
-1. Din ramura **implicită** a repozitoriului tău, creează o nouă ramură de cod numită `feature/bad`
+1. Din ramura **main** a repozitoriului tău, creează o nouă ramură de cod numită `feature/bad`
 2. Înlocuiește conținutul fișierului [nodejs_app/index.js](./nodejs_app/index.js) cu conținutul din [./nodejs_replacements/13-index.js](./nodejs_replacements/13-index.js)
 3. Adaugă și comite modificările tale, apoi împinge ramura ta.
 4. Mergi la depozitul tău, fă clic pe fila `Pull Requests` și deschide o cerere de extragere pentru a fuziona `feature/bad` în ramura ta **implicită**.
