@@ -96,9 +96,9 @@ jobs:
 Rezultatul va fi ca `steps` acum are datele de la pasul anterior.
 
 ## 4. Adauga o a doua variabila de output
-Este posibil sa transmiti mai multe valori intr-un singur pas. Acest lucru te va invata cum sa realizezi acest lucru si apoi sa accesezi ambele valori.
+Este posibil sa transmiti mai multe valori intr-un singur pas.
 
-1. Urmeaza acelasi proces ca in [Pasul 3](#pasul-3-update-the-workflow-with-an-id-for-the-step), dar foloseste acest continut:
+1. Urmeaza acelasi proces ca in Pasul 3, dar foloseste acest continut:
 
 ```yaml
 name: Context Information
