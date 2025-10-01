@@ -42,7 +42,7 @@ jobs:
       - name: Run Tests
         run: npm test
       - name: Store Artifact
-        uses: actions/upload-artifact@v3.1.0
+        uses: actions/upload-artifact@v4
         with:
           name: nodejs_app
           path: nodejs_app/
@@ -67,6 +67,6 @@ Este important de menționat că retenția artefactelor este valabilă doar atâ
 
 ## 2. Merge la modificări în ramura ta **main** și actualizează-ți repozitoriul local
 
-1. Fă clic pe butonul verde `Merge pull request` din cererea de extragere de la pasul 1.6. Acest lucru va pune codul tău în ramura principală.
-2. Șterge ramura publicată creată în [Pasul 1](#step-1-add-the-artifact-save-action)
-3. Treci la ramura **implicită** a repozitoriului tău local și execută `git pull` pentru a-ți actualiza depozitul local.
+1. Fă click pe butonul verde `Merge pull request` din PR-ul de la pasul 1.6.
+2. Șterge ramura creată anterior
+3. Treci la ramura **main** a repozitoriului tău local și execută `git pull` pentru a-ți actualiza versiunea locală.
