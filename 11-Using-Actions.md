@@ -27,12 +27,12 @@ jobs:
         run: ls -latr
 ```
 
-In exemplu anterior, rulam comenzi în runner, dar runner-ul (implicit) nu are conținutul depozitului clonat. În configurația de mai sus, folosim acțiunea `actions/checkout` (deținută de GitHub în organizația `actions`) pentru a clona codul în runner.
+In exemplu anterior, rulam comenzi în runner, dar runner-ul (implicit) nu are conținutul repozitoriului clonat. În configurația de mai sus, folosim acțiunea `actions/checkout` (deținută de GitHub în organizația `actions`) pentru a clona codul în runner.
 
-4. Adaugă, commit și împinge modificările tale către ramura implicită.
-5. Mergi la depozitul tău și vizualizează fila Acțiuni pentru a vedea execuția împotriva ramurii tale publicate.
+4. Adaugă, commit și fa push modificărilor tale către ramura main.
+5. Mergi la repozitoriul tău și vizualizează pagina Actions pentru a vedea execuția împotriva ramurii tale publicate.
 
-Rezultatul va fi o execuție care listează conținutul unui director gol, clonează depozitul și apoi listează din nou conținutul (de data aceasta, cu fișiere).
+Rezultatul va fi o execuție care afiseaza conținutul unui director gol, clonează repozitoriul și apoi afiseaza din nou conținutul (de data aceasta, cu fișiere).
 
 Similar cu workflow-urile reutilizabile, sintaxa pentru o acțiune este `<owner>/<repo>@<release-tag>`
 
@@ -67,10 +67,10 @@ jobs:
         run: ls -latr
 ```
 
-4. Adaugă, commit și împinge modificările tale către ramura implicită.
-5. Mergi la depozitul tău și vizualizează fila Acțiuni pentru a vedea execuția.
+4. Adaugă, commit și fa push modificărilor tale către ramura implicită.
+5. Mergi la repozitoriul tău și vizualizează pagina Actions pentru a vedea execuția.
 
-Rezultatul va fi același ca înainte, dar de data aceasta am adăugat input-ul `clean` pentru a efectua câteva sarcini suplimentare de curățare atunci când clonăm depozitul (definit în documentație)
+Rezultatul va fi același ca înainte, dar de data aceasta am adăugat input-ul `clean` pentru a efectua câteva sarcini suplimentare de curățare atunci când clonăm repozitoriul (definit în documentație)
 
 ## 3. Folosirea `script-actions` pentru a scrie acțiuni rapide pentru interacțiunea cu API-ul GitHub
 
@@ -112,16 +112,16 @@ jobs:
             return create.data.number
 ```
 
-4. Adaugă, commit și împinge modificările tale către ramura implicită.
-5. Mergi la depozitul tău și vizualizează fila Acțiuni pentru a vedea execuția, apoi vizitează fila Probleme.
+4. Adaugă, commit și fa push modificărilor tale către ramura implicită.
+5. Mergi la repozitoriul tău și vizualizează pagina Actions pentru a vedea execuția, apoi vizitează pagina Issues.
 
-Rezultatul va fi o problemă creată în depozitul tău.
+Rezultatul va fi o problemă creată în repozitoriul tău.
 
-## 4. Fuzionarea cererii de extragere în ramura **implicită** pentru utilizare ulterioară
+## 4. Fuzionarea cererii de extragere în ramura **main** pentru utilizare ulterioară
 
-În pașii anteriori, am implementat acțiuni publice, dar am folosit în mod special o versiune învechită. Vrem ca aceasta să fie pusă în ramura **implicită** pentru a o putea vedea într-un pas ulterior.
+În pașii anteriori, am implementat acțiuni publice, dar am folosit în mod special o versiune învechită. Vrem ca aceasta să fie pusă în ramura **main** pentru a o putea vedea într-un pas ulterior.
 
-1. Dute la depozitul tău și navighează la fila "Pull Requests"
-2. Creează o nouă cerere de extragere pentru a fuziona `feature/using-actions` în ramura ta **implicită**
+1. Dute la repozitoriul tău și navighează la pagina "Pull Requests"
+2. Creează un nou PR pentru a fuziona `feature/using-actions` în ramura ta **main**
 3. Fuzionează cererea de extragere creată.
-4. Șterge ramura publicată creată în [Pasul 1](#step-1-create-a-new-workflow-file)
+4. Șterge ramura creată în Pasul 1.
