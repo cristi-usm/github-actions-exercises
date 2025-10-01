@@ -41,7 +41,8 @@ jobs:
 
 Rezultatul va fi o executie a workflow-ului ori de cate ori se fac push-uri cu exceptia (EXCEPT) cand au loc pe ramura `main`. Informatiile de context sunt vizibile in output astfel incat sa poti intelege cum sa utilizezi acele valori in workflow-urile tale.
 
-## 2. Actualizeaza workflow-ul cu output-ul pasului
+## 2. Actualizeaza workflow-ul cu output-ul din `steps`
+
 Anterior, am vazut toate datele disponibile in diferitele obiecte de context, dar variabila de context `steps` era goala. Aici, vom invata cum sa populam variabila de context `steps`, astfel incat sa putem transmite date catre pasii urmatori. De asemenea, vom omite intentionat o setare necesara pentru a finaliza acest pas, deoarece poate fi o greseala comuna.
 
 1. Inlocuieste continutul fisierului workflow din pasul anterior:
