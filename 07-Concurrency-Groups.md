@@ -4,7 +4,7 @@ In mod implicit, toate workflow-urile functioneaza cu un anumit nivel de concure
 
 ## 1. Creeaza doua workflow-uri care asculta pentru aceleasi evenimente cu concurenta definita
 
-1. Din ramura **default** a repozitoriului tau, creeaza o noua ramura de cod numita `feature/concurrency`
+1. Din ramura **main** a repozitoriului tau, creeaza o noua ramura de cod numita `feature/concurrency`
 2. Creeaza un nou fisier numit `.github/workflows/concurrency.yaml`
 3. Copiaza continutul de mai jos in fisierul nou creat:
 
