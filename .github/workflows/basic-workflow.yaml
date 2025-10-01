@@ -1,0 +1,11 @@
+name: Basic Workflow
+on:
+    push:
+        branches: feature/basic-workflow
+jobs:
+    say-hello:
+        name: Say Hello
+        runs-on: ubuntu-latest
+        steps:
+            - name: Greet the World
+              run: echo "Hello, World!"
