@@ -1,0 +1,15 @@
+name: Using Actions
+on:
+    push:
+        branches: feature/using-actions
+jobs:
+    do-things:
+        name: Doing Things With Actions
+        runs-on: ubuntu-latest
+        steps:
+            - name: List Directory Contents
+              run: ls -latr
+            - name: Checkout The Code
+              uses: actions/checkout@v3
+            - name: List Directory Contents Again
+              run: ls -latr

@@ -27,10 +27,10 @@ jobs:
         run: ls -latr
 ```
 
-In exemplu anterior, rulam comenzi în runner, dar runner-ul (implicit) nu are conținutul depozitului clonat. În configurația de mai sus, folosim acțiunea `actions/checkout` (deținută de GitHub în organizația `actions`) pentru a clona codul în runner.
+In exemplu anterior, rulam comenzi în runner, dar runner-ul (implicit) nu are conținutul repozitoriului clonat. În configurația de mai sus, folosim acțiunea `actions/checkout` (deținută de GitHub în organizația `actions`) pentru a clona codul în runner.
 
-4. Adaugă, commit și împinge modificările tale către ramura implicită.
-5. Mergi la depozitul tău și vizualizează fila Acțiuni pentru a vedea execuția împotriva ramurii tale publicate.
+4. Adaugă, commit și fa push modificărilor tale către ramura main.
+5. Mergi la repozitoriul tău și vizualizează pagina Actions pentru a vedea execuția împotriva ramurii tale publicate.
 
 Rezultatul va fi o execuție care listează conținutul unui director gol, clonează depozitul și apoi listează din nou conținutul (de data aceasta, cu fișiere).
 
