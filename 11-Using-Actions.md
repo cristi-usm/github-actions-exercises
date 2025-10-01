@@ -117,11 +117,11 @@ jobs:
 
 Rezultatul va fi o problemă creată în repozitoriul tău.
 
-## 4. Fuzionarea cererii de extragere în ramura **implicită** pentru utilizare ulterioară
+## 4. Fuzionarea cererii de extragere în ramura **main** pentru utilizare ulterioară
 
-În pașii anteriori, am implementat acțiuni publice, dar am folosit în mod special o versiune învechită. Vrem ca aceasta să fie pusă în ramura **implicită** pentru a o putea vedea într-un pas ulterior.
+În pașii anteriori, am implementat acțiuni publice, dar am folosit în mod special o versiune învechită. Vrem ca aceasta să fie pusă în ramura **main** pentru a o putea vedea într-un pas ulterior.
 
-1. Dute la depozitul tău și navighează la fila "Pull Requests"
-2. Creează o nouă cerere de extragere pentru a fuziona `feature/using-actions` în ramura ta **implicită**
+1. Dute la repozitoriul tău și navighează la pagina "Pull Requests"
+2. Creează un nou PR pentru a fuziona `feature/using-actions` în ramura ta **main**
 3. Fuzionează cererea de extragere creată.
-4. Șterge ramura publicată creată în [Pasul 1](#step-1-create-a-new-workflow-file)
+4. Șterge ramura creată în Pasul 1.
