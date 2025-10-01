@@ -65,4 +65,4 @@ Rezultatul va fi un buton (atunci cand vizualizezi workflow-ul) pe care il poti 
 Rezultatul va fi o executie a workflow-ului de mai sus.
 
 ## 3. Curatare
-Nu sunt necesari pasi suplimentari deoarece ai comis direct in ramura implicita.
+Nu sunt necesari pasi suplimentari deoarece ai comis direct in ramura principala.
