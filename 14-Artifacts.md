@@ -48,52 +48,10 @@ jobs:
           path: nodejs_app/
 ```
 
-### Varianta Golang:
-
-<details>
-<summary>Click pentru a vedea exemplul Golang</summary>
-
-```yaml
-name: Continuous Integration & Delivery
-on:
-  pull_request:
-  workflow_dispatch:
-defaults:
-  run:
-    shell: bash
-jobs:
-  ci:
-    name: Continuous Integration
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: golang_app
-    steps:
-      - name: Clone
-        uses: actions/checkout@v3.1.0
-      - name: Get Dependencies
-        run: go get app
-      - name: Build
-        run: go build
-      - name: Run Linting
-        uses: golangci/golangci-lint-action@v3
-        with:
-          working-directory: golang_app
-      - name: Run Tests
-        run: go test
-      - name: Store Artifact
-        uses: actions/upload-artifact@v3.1.0
-        with:
-          name: golang_app
-          path: golang_app/app
-```
-
-</details>
-
-4. Adaugă și comite modificările tale, apoi împinge ramura ta.
-5. Mergi la depozitul tău și vizualizează fila `Pull Requests`.
-6. Deschide o cerere de extragere pentru a fuziona `feature/artifacts` în ramura ta **implicită**.
-7. Fă clic pe linkul `Show All Checks` de pe verificările de stare din cererea ta de extragere, apoi fă clic pe linkul `Details` de lângă `Continuous Integration`.
+1. Adaugă și comite modificările tale, apoi fa push ramurii tale.
+2. Mergi la repozitorul tău și vizualizează pagina `Pull Requests`.
+3. Deschide un PR pentru a merge-ui `feature/artifacts` în ramura ta **main**.
+4. Fă click pe linkul `Show All Checks` de pe verificările de stare din PR-uri, apoi fă click pe linkul `Details` de lângă `Continuous Integration`.
 
 ![status checks successful](./images/14-status-checks.png)
 
@@ -107,7 +65,7 @@ Este important de menționat că retenția artefactelor este valabilă doar atâ
 
 ![artifacts on build dashboard](./images/14-artifacts.png)
 
-## 2. Fuzionează modificările în ramura ta **implicită** și actualizează-ți repozitoriul local
+## 2. Merge la modificări în ramura ta **main** și actualizează-ți repozitoriul local
 
 1. Fă clic pe butonul verde `Merge pull request` din cererea de extragere de la pasul 1.6. Acest lucru va pune codul tău în ramura principală.
 2. Șterge ramura publicată creată în [Pasul 1](#step-1-add-the-artifact-save-action)
