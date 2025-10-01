@@ -32,7 +32,7 @@ In exemplu anterior, rulam comenzi în runner, dar runner-ul (implicit) nu are c
 4. Adaugă, commit și fa push modificărilor tale către ramura main.
 5. Mergi la repozitoriul tău și vizualizează pagina Actions pentru a vedea execuția împotriva ramurii tale publicate.
 
-Rezultatul va fi o execuție care listează conținutul unui director gol, clonează depozitul și apoi listează din nou conținutul (de data aceasta, cu fișiere).
+Rezultatul va fi o execuție care afiseaza conținutul unui director gol, clonează repozitoriul și apoi afiseaza din nou conținutul (de data aceasta, cu fișiere).
 
 Similar cu workflow-urile reutilizabile, sintaxa pentru o acțiune este `<owner>/<repo>@<release-tag>`
 
@@ -67,10 +67,10 @@ jobs:
         run: ls -latr
 ```
 
-4. Adaugă, commit și împinge modificările tale către ramura implicită.
-5. Mergi la depozitul tău și vizualizează fila Acțiuni pentru a vedea execuția.
+4. Adaugă, commit și fa push modificărilor tale către ramura implicită.
+5. Mergi la repozitoriul tău și vizualizează pagina Actions pentru a vedea execuția.
 
-Rezultatul va fi același ca înainte, dar de data aceasta am adăugat input-ul `clean` pentru a efectua câteva sarcini suplimentare de curățare atunci când clonăm depozitul (definit în documentație)
+Rezultatul va fi același ca înainte, dar de data aceasta am adăugat input-ul `clean` pentru a efectua câteva sarcini suplimentare de curățare atunci când clonăm repozitoriul (definit în documentație)
 
 ## 3. Folosirea `script-actions` pentru a scrie acțiuni rapide pentru interacțiunea cu API-ul GitHub
 

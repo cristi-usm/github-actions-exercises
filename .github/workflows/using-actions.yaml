@@ -11,5 +11,7 @@ jobs:
               run: ls -latr
             - name: Checkout The Code
               uses: actions/checkout@v3
+              with:
+                  clean: true
             - name: List Directory Contents Again
               run: ls -latr
