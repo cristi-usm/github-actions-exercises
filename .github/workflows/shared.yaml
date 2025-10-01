@@ -1,0 +1,10 @@
+name: Using Shared Workflow
+on:
+    push:
+        branches: main
+jobs:
+    centralized-job:
+        uses: ./.github/workflows/manual.yaml
+        with:
+            choice-example: debug
+            string-example: a thing

@@ -59,7 +59,7 @@ Rezultatul va fi un workflow care poate fi declanșat manual sau apelat de alte 
 
 ## 2. Adaugă un nou workflow care folosește workflow-ul `Manual & Shared`
 
-1. Treci la ramura **implicită** a repozitoriului depozitului tău
+1. Treci la ramura **main** a repozitoriului depozitului tău
 2. Creează un nou fișier numit `.github/workflows/shared.yaml`
 3. Înlocuiește conținutul fișierului cu:
 
@@ -75,7 +75,7 @@ jobs:
       choice-example: debug
       string-example: a thing
 ```
-4. Adaugă, commite și împinge modificările tale către ramura implicită. 
+4. Adaugă, commit-e și împinge modificările tale către ramura implicită. 
 5. Mergi la depozitul tău și vizualizează fila Acțiuni pentru a vedea workflow-ul pe care l-ai creat (`Manual & Shared Workflow`)
 
 Rezultatul va fi o execuție a workflow-ului `Manual & Shared Workflow`, care va afișa valorile transmise din opțiunea `with`.
