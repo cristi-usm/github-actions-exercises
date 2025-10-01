@@ -1,12 +1,12 @@
 # Integrare Continuă
+
 Un model comun pentru integrarea continuă implică utilizarea cererilor de extragere pentru a declanșa teste și alte sarcini de automatizare.
 
-În exercițiul de mai jos, vom parcurge adăugarea de linting și testare pentru cererile de extragere pentru o aplicație Node.js de exemplu. Acest lucru se va declanșa la crearea cererii de extragere, precum și la actualizările codului din ramura la care se referă PR-ul.
-
-> **Notă**: Există și un exemplu Golang disponibil în directorul `golang_app` dacă preferi să lucrezi cu Go.
+În exercițiul de mai jos, vom parcurge adăugarea de linting și testare pentru PR-urile unei aplicații Node.js. Acest lucru se va declanșa la crearea de PR-uri, precum și la actualizările codului din ramura la care se referă PR-ul.
 
 ## 1. Creează un workflow care se declanșează la crearea cererii de extragere
-1. Treci la ramura **implicită** a repozitoriului tău
+
+1. Treci la ramura **main** a repozitoriului tău
 2. Creează un nou fișier numit `.github/workflows/ci-cd.yaml`
 3. Copiază conținutul de mai jos în fișierul nou creat:
 
@@ -42,47 +42,10 @@ jobs:
         run: npm test
 ```
 
-### Varianta Golang:
+4. Adaugă, commit și fa push modificărilor tale către ramura implicită.
+5. Mergi la repozitorul tău și vizualizează pagina Actions pentru a vedea workflow-ul pe care l-ai creat (`Continuous Integration`)
 
-<details>
-<summary>Click pentru a vedea exemplul Golang</summary>
-
-```yaml
-name: Continuous Integration & Delivery
-on:
-  pull_request:
-  workflow_dispatch:
-defaults:
-  run:
-    shell: bash
-jobs:
-  ci:
-    name: Continuous Integration
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: golang_app
-    steps:
-      - name: Clone
-        uses: actions/checkout@v3.1.0
-      - name: Get Dependencies
-        run: go get app
-      - name: Build
-        run: go build
-      - name: Run Linting
-        uses: golangci/golangci-lint-action@v3
-        with:
-          working-directory: golang_app
-      - name: Run Tests
-        run: go test
-```
-
-</details>
-
-4. Adaugă, commit și împinge modificările tale către ramura implicită.
-5. Mergi la depozitul tău și vizualizează fila Acțiuni pentru a vedea workflow-ul pe care l-ai creat (`Continuous Integration`)
-
-Rezultatul va fi un workflow pe care îl poți executa manual și care este declanșat automat de o cerere de extragere.
+Rezultatul va fi un workflow pe care îl poți executa manual și care este declanșat automat de un PR.
 
 ## 2. Activează protecția ramurii pe ramura ta **implicită**
 Protecția ramurii este una dintre caracteristicile pe care GitHub le oferă și care îți permite să controlezi cine, ce și când poate fi împins pe o ramură. Pentru integrarea continuă, livrarea continuă și desfășurarea continuă, această caracteristică este esențială. În pasul de mai jos, vom activa aceasta pentru a ne asigura că niciun "cod rău" nu poate trece.

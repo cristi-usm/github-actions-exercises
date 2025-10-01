@@ -1,0 +1,27 @@
+name: Continuous Integration & Delivery
+on:
+    pull_request:
+    workflow_dispatch:
+defaults:
+    run:
+        shell: bash
+jobs:
+    ci:
+        name: Continuous Integration
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: nodejs_app
+        steps:
+            - name: Clone
+              uses: actions/checkout@v3.1.0
+            - name: Setup Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: "18"
+            - name: Install Dependencies
+              run: npm ci
+            - name: Run Linting
+              run: npx eslint . --max-warnings 0
+            - name: Run Tests
+              run: npm test
