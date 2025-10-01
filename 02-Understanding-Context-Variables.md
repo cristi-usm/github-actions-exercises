@@ -69,10 +69,10 @@ jobs:
 
 Rezultatul va fi ca `steps` este inca gol.
 
-## 3. Actualizeaza workflow-ul cu un `id` pentru pas
-In cele din urma, pentru a finaliza ceea ce am invatat in [Pasul 2](#pasul-2-update-the-workflow-to-with-step-output), vom aplica proprietatea necesara `id` astfel incat sa putem transmite date intre pasi.
+## 3. Actualizeaza workflow-ul cu un `id` pentru `steps`
+In cele din urma, pentru a finaliza ceea ce am invatat in Pasul 2, vom aplica proprietatea necesara `id` astfel incat sa putem transmite date intre pasi.
 
-1. Urmeaza acelasi proces ca in [Pasul 2](#pasul-2-update-the-workflow-to-with-step-output), dar foloseste acest continut:
+1. Urmeaza acelasi proces ca in etapa anterioara, dar foloseste acest continut:
 
 ```yaml
 name: Context Information
