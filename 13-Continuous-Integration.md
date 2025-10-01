@@ -62,31 +62,19 @@ Protecția ramurii este una dintre caracteristicile pe care GitHub le oferă și
 
 Acum că ramura **main** este protejată, vom adăuga niște cod "rău" care va eșua la linting. Acest lucru ne va oferi un exemplu despre cum verificările de stare necesare ne vor împiedica să facem greșeli.
 
-### Varianta Node.js:
+### Node.js:
 
 1. Din ramura **main** a repozitoriului tău, creează o nouă ramură de cod numită `feature/bad`
 2. Înlocuiește conținutul fișierului [nodejs_app/index.js](./nodejs_app/index.js) cu conținutul din [./nodejs_replacements/13-index.js](./nodejs_replacements/13-index.js)
-3. Adaugă și comite modificările tale, apoi împinge ramura ta.
-4. Mergi la depozitul tău, fă clic pe fila `Pull Requests` și deschide o cerere de extragere pentru a fuziona `feature/bad` în ramura ta **implicită**.
+3. Adaugă și comite modificările tale, apoi fa push ramurii tale.
+4. Mergi la repozitoriul tău, fă click pe pagina `Pull Requests` și deschide un PR pentru a merge-ui `feature/bad` în ramura ta **main**.
 
-### Varianta Golang:
-
-<details>
-<summary>Click pentru a vedea exemplul Golang</summary>
-
-1. Din ramura **implicită** a repozitoriului tău, creează o nouă ramură de cod numită `feature/bad`
-2. Înlocuiește conținutul fișierului [golang_app/main.go](./golang_app/main.go) cu conținutul din [./golang_replacements/13-main.go](./golang_replacements/13-main.go)
-3. Adaugă și comite modificările tale, apoi împinge ramura ta.
-4. Mergi la depozitul tău, fă clic pe fila `Pull Requests` și deschide o cerere de extragere pentru a fuziona `feature/bad` în ramura ta **implicită**.
-
-</details>
-
-Rezultatul va fi incapacitatea de a fuziona (butonul va fi dezactivat) deoarece verificarea de stare pentru `Build, Lint, & Test` va eșua la pasul `Lint`. Aceasta este modalitatea prin care te asiguri că dezvoltatorii își asumă responsabilitatea și că există o calitate a codului.
+Rezultatul va fi incapacitatea de a face merge (butonul va fi dezactivat) deoarece verificarea de stare pentru `Build, Lint, & Test` va eșua la pasul `Lint`. Aceasta este modalitatea prin care te asiguri că dezvoltatorii își asumă responsabilitateași că există o calitate a codului.
 
 ![the status checks failing](images/12-status-checks.png)
 
 Verificarile de stare care sunt necesare au insigna `Required` lângă ele. Pot fi adăugate verificări suplimentare pentru a include analiza statică a codului și altele.
 
 ## 4. Curățare
-5. Închide cererea de extragere (nu fuziona)
+5. Închide PR-ul.
 6. Șterge ramura `feature/bad`
