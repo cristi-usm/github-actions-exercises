@@ -5,9 +5,10 @@ Pe langa evenimentele de tip push, workflow-urile pot fi declansate si de o vari
 Vezi [documentatia pentru declansarea evenimentelor](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows) pentru mai multe informatii.
 
 ## 1. Creeaza un workflow declansat de un issue
+
 Vom incepe prin a crea un workflow declansat de deschiderea unui issue si vom vedea direct unul dintre cele mai importante detalii ale workflow-urilor non-push.
 
-1. Din ramura **default** a repozitoriului tau, creeaza o noua ramura de cod numita `feature/issue-workflow`
+1. Din ramura **main** a repozitoriului tau, creeaza o noua ramura de cod numita `feature/issue-workflow`
 2. Creeaza un nou fisier numit `.github/workflows/issue-workflow.yaml`
 3. Copiaza continutul de mai jos in fisierul nou creat:
 
