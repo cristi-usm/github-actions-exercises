@@ -5,20 +5,10 @@ Toate workflow-urile au acces la informatii de context in timpul rularii.
 
 Mai intai, sa aruncam o privire asupra tuturor obiectelor de context disponibile in runner. Vom face acest lucru prin conversia obiectelor in JSON si stocarea acestora intr-o variabila de mediu in fiecare pas. In cele din urma, vom iesi afisa acea variabila de mediu cu o simpla instructiune `echo`.
 
-1. Din ramura **default** a repozitoriului tau, creeaza o noua ramura de cod numita `feature/context`
+1. Din ramura **main** a repozitoriului tau, creeaza o noua ramura de cod numita `feature/context`
 2. Creeaza un nou fisier numit `.github/workflows/context.yaml`
 3. Copiaza continutul de mai jos in fisierul nou creat:
 
-```yaml
-name: Context Information
-on:
-  push:
-    branches-ignore: main
-jobs:
-  show-context:
-    name: Show Context
-    runs-on: ubuntu-latest
-    steps:
 ```yaml
 name: Context Information
 on:
@@ -51,7 +41,8 @@ jobs:
 
 Rezultatul va fi o executie a workflow-ului ori de cate ori se fac push-uri cu exceptia (EXCEPT) cand au loc pe ramura `main`. Informatiile de context sunt vizibile in output astfel incat sa poti intelege cum sa utilizezi acele valori in workflow-urile tale.
 
-## 2. Actualizeaza workflow-ul cu output-ul pasului
+## 2. Actualizeaza workflow-ul cu output-ul din `steps`
+
 Anterior, am vazut toate datele disponibile in diferitele obiecte de context, dar variabila de context `steps` era goala. Aici, vom invata cum sa populam variabila de context `steps`, astfel incat sa putem transmite date catre pasii urmatori. De asemenea, vom omite intentionat o setare necesara pentru a finaliza acest pas, deoarece poate fi o greseala comuna.
 
 1. Inlocuieste continutul fisierului workflow din pasul anterior:
@@ -78,10 +69,10 @@ jobs:
 
 Rezultatul va fi ca `steps` este inca gol.
 
-## 3. Actualizeaza workflow-ul cu un `id` pentru pas
-In cele din urma, pentru a finaliza ceea ce am invatat in [Pasul 2](#pasul-2-update-the-workflow-to-with-step-output), vom aplica proprietatea necesara `id` astfel incat sa putem transmite date intre pasi.
+## 3. Actualizeaza workflow-ul cu un `id` pentru `steps`
+In cele din urma, pentru a finaliza ceea ce am invatat in Pasul 2, vom aplica proprietatea necesara `id` astfel incat sa putem transmite date intre pasi.
 
-1. Urmeaza acelasi proces ca in [Pasul 2](#pasul-2-update-the-workflow-to-with-step-output), dar foloseste acest continut:
+1. Urmeaza acelasi proces ca in etapa anterioara, dar foloseste acest continut:
 
 ```yaml
 name: Context Information
@@ -105,9 +96,9 @@ jobs:
 Rezultatul va fi ca `steps` acum are datele de la pasul anterior.
 
 ## 4. Adauga o a doua variabila de output
-Este posibil sa transmiti mai multe valori intr-un singur pas. Acest lucru te va invata cum sa realizezi acest lucru si apoi sa accesezi ambele valori.
+Este posibil sa transmiti mai multe valori intr-un singur pas.
 
-1. Urmeaza acelasi proces ca in [Pasul 3](#pasul-3-update-the-workflow-with-an-id-for-the-step), dar foloseste acest continut:
+1. Urmeaza acelasi proces ca in Pasul 3, dar foloseste acest continut:
 
 ```yaml
 name: Context Information
@@ -134,5 +125,5 @@ Rezultatul va fi ca `steps` context are acum si mai multe date decat pasul anter
 
 ## 5. Curatare
 
-1. Sterge ramura publicata creata in [Pasul 1](#pasul-1-create-a-new-workflow-to-see-different-contexts)
+1. Sterge ramura publicata creata in Pasul 1
 2. Comuta inapoi la ramura implicita local.
