@@ -5,20 +5,10 @@ Toate workflow-urile au acces la informatii de context in timpul rularii.
 
 Mai intai, sa aruncam o privire asupra tuturor obiectelor de context disponibile in runner. Vom face acest lucru prin conversia obiectelor in JSON si stocarea acestora intr-o variabila de mediu in fiecare pas. In cele din urma, vom iesi afisa acea variabila de mediu cu o simpla instructiune `echo`.
 
-1. Din ramura **default** a repozitoriului tau, creeaza o noua ramura de cod numita `feature/context`
+1. Din ramura **main** a repozitoriului tau, creeaza o noua ramura de cod numita `feature/context`
 2. Creeaza un nou fisier numit `.github/workflows/context.yaml`
 3. Copiaza continutul de mai jos in fisierul nou creat:
 
-```yaml
-name: Context Information
-on:
-  push:
-    branches-ignore: main
-jobs:
-  show-context:
-    name: Show Context
-    runs-on: ubuntu-latest
-    steps:
 ```yaml
 name: Context Information
 on:
