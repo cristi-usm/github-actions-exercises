@@ -13,9 +13,10 @@ Sunt cateva cerinte pentru ca acest lucru sa fie activat pe un workflow:
 Urmatorul exercitiu te va ghida prin crearea unui workflow declansat manual, si apoi te va face sa efectuezi o executie manuala prin intermediul interfetei GitHub.
 
 ## 1. Creeaza un nou workflow care sa fie declansat manual
+
 Singurul pas in acest exercitiu este sa adaugi workflow-ul in ramura ta implicita direct.
 
-1. Treci pe ramura **default** a repozitoriului tau
+1. Treci pe ramura **main** a repozitoriului tau
 2. Creeaza un nou fisier numit `.github/workflows/manual.yaml`
 3. Copiaza continutul de mai jos in fisierul nou creat:
 
@@ -47,7 +48,7 @@ jobs:
         run: echo "I've done a thing manually with '${{ inputs.choice-example }}' and '${{ inputs.string-example }}'!"
 ```
 
-4. Adauga, comite, si impinge schimbarile tale in ramura implicita.
+4. Adauga, comite, si fa push la schimbarile tale in ramura implicita.
 5. Mergi la repozitoriul tau, si vizualizeaza tab-ul Actions pentru a vedea workflow-ul creat (`Manual Workflow`)
 
 Rezultatul va fi un buton (atunci cand vizualizezi workflow-ul) pe care il poti folosi pentru a executa workflow-ul.

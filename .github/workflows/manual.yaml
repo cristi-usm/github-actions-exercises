@@ -1,0 +1,25 @@
+name: Manual Workflow
+on:
+    workflow_dispatch:
+        inputs:
+            choice-example:
+                description: Choice Example
+                required: true
+                default: warning
+                type: choice
+                options:
+                    - info
+                    - warning
+                    - debug
+            string-example:
+                description: String Example
+                required: true
+                default: input
+                type: string
+jobs:
+    do-things:
+        name: Do Things Manually
+        runs-on: ubuntu-latest
+        steps:
+            - name: Do A Thing
+              run: echo "I've done a thing manually with '${{ inputs.choice-example }}' and '${{ inputs.string-example }}'!"
