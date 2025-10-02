@@ -11,7 +11,7 @@ In exercitiul anterior despre `Continuous Integration`, ai construit un flux de 
 2. Deschide fișierul numit `.github/workflows/ci-cd.yaml`
 3. Înlocuiește conținutul fișierului cu:
 
-### Varianta Node.js:
+### Node.js:
 
 ```yaml
 name: Continuous Integration & Delivery
@@ -57,29 +57,15 @@ jobs:
 8. Mergi la repozitoriul tău și vizualizează pagina `Pull Requests`.
 9. Deschide un PR pentru a fuziona `feature/cache` în ramura ta **main**.
 
-În pașii de mai sus, ai adăugat caching în fișierul de workflow. Pentru Node.js, acțiunea `actions/setup-node` include caching integrat pentru npm.
-
-![A picture of the button](images/15-cache-steps.png)
-
 Nici un pas suplimentar nu este necesar pentru a-ți salva cache-ul, deoarece acțiunea are hook-uri post-execuție care se ocupă de acest lucru pentru tine.
 
 Rezultatul nu va fi o economie mare de timp, deoarece numărul de dependențe este foarte mic, dar într-un scenariu din lumea reală, acest lucru ar putea economisi mult, reducând descărcările de dependențe de la zeci de minute la doar câteva secunde.
-  
-## 2. Vizualizează zona "Caches" pe Workflow
-
-În cadrul vizualizării workflow-ului, cache-urile pentru orice workflow dat pot fi văzute. Va trebui să ai mai întâi o execuție de succes, dar ulterior vizualizarea va fi disponibilă.
-
-1. Mergi la fila `Actions` din depozitul tău.
-2. Fă clic pe workflow-ul `Continuous Integration & Delivery` din stânga.
-3. În cele din urmă, fă clic pe linkul `Caches` din navigarea din stânga. Poți face acest lucru și din partea de sus (nu este nevoie să te duci în `Actions`) pentru a vedea toate cache-urile dintr-un depozit.
-
-![A picture of the button](images/15-cache-view.png)
 
 ## 3. Fuzionează modificările în ramura ta **main** și actualizează-ți repozitoriul local
 
 1. Fă click pe butonul verde `Merge pull request` din cererea de extragere din pasul 1.9. Acest lucru va pune codul tău în ramura principală.
 2. Șterge ramura publicată creată în Pasul 1.
-3. Checkout pe ramura ta principală local și trage modificările.
+3. Checkout pe ramura ta principală local și fa pull la modificările tale.
 
 ---
 
