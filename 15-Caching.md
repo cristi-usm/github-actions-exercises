@@ -75,7 +75,6 @@ Rezultatul nu va fi o economie mare de timp, deoarece numărul de dependențe es
 
 ![A picture of the button](images/15-cache-view.png)
 
-
 ## 3. Fuzionează modificările în ramura ta **main** și actualizează-ți repozitoriul local
 
 1. Fă click pe butonul verde `Merge pull request` din cererea de extragere din pasul 1.9. Acest lucru va pune codul tău în ramura principală.
